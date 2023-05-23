@@ -3,6 +3,11 @@
     width: 70px;
 }
 
+.ListaArtista{
+    list-style-type: none;
+    
+}
+
 .ImagenesAlbum{
     height: 50px;
     width: 70px;
