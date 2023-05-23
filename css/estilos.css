@@ -10,9 +10,10 @@ body{
     width: 100px;
     border-radius: 50%;
 }
-
-.ListaArtista{
+li{
     list-style-type: none;
+}
+.ListaArtista{
     display: flex;
     flex-direction: row;
 }
