@@ -1,13 +1,24 @@
-.imagenes{
-    height: 50px;
-    width: 70px;
+
+body{
+    background-image: url(../img/fondoVioleta.avif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
+
+
+.imagenes{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
 
 .ListaArtista{
     list-style-type: none;
-    
+    display: flex;
+    flex-direction: row;
 }
-
 .ImagenesAlbum{
     height: 50px;
     width: 70px;
