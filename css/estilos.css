@@ -9,15 +9,27 @@ body{
     height: 100px;
     width: 100px;
     border-radius: 50%;
+    flex-wrap: wrap;
+}
+li{
+   list-style: none;
 }
 
 .ListaArtista{
     list-style-type: none;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
-
+.ListaAlbum{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
 .ImagenesAlbum{
-    height: 0px;
+    height: 100px;
     width: 100px;
+    
 }
