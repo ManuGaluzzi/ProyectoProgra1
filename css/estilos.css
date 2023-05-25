@@ -1,9 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700");
+
 body{
     background-image: url(../img/fondoVioleta.avif);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    font-family: Inter;
 }
+
 
 .imagenes{
     height: 100px;
@@ -14,9 +18,10 @@ body{
 li{
    list-style: none;
 }
-
-.ListaArtista{
+li{
     list-style-type: none;
+}
+.ListaArtista{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
