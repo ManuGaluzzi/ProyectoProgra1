@@ -54,3 +54,12 @@ li{
     height: 100px;
     width: 100px;  
 }
+
+
+.SectionGenres{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
