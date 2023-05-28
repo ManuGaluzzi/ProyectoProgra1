@@ -1,26 +1,52 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@700");
 
+*{
+    box-sizing: border-box;
+    
+}
+a{
+    text-decoration: none;
+    color: black;
+}
 body{
-    background-image: url(../img/fondoVioleta.avif);
+    /* background-image: url(../img/fondoVioleta.avif); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     font-family: Inter;
     font-weight: 700;
-}
-
-.title{
-    font-size: 45px;
-}
-
-nav{
-    display: flex;
-    flex-direction: row;
-    align-self: center;
-    justify-content: space-between;
+    background-color: black;
+    color: blueviolet;
 }
 
 header{
+    background-color: blueviolet;
+    color: black;
+}
+
+h1{
+    font-size: 45px;
+    margin-bottom: 0px;
+}
+
+.search{
+    margin-bottom: 20px;
+}
+
+.nav1{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.navegacion{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content:flex-end;
+}
+
+.nav2{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,10 +59,9 @@ header{
     flex-wrap: wrap;
 }
 li{
-   list-style: none;
-}
-li{
+    list-style: none;
     list-style-type: none;
+    padding: 10px;
 }
 .ListaArtista{
     display: flex;
@@ -44,6 +69,14 @@ li{
     justify-content: space-between;
     align-items: center;
 }
+.liartista{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 180px;
+    width: 142px;
+}
+
 .ListaAlbum{
     display: flex;
     flex-direction: row;
@@ -63,3 +96,24 @@ li{
     align-items: center;
 }
 
+
+
+
+.ulfoot21{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.ulfoot2{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-size: smaller;
+}
+
+
+footer{
+    background-color: blueviolet;
+    color: black; 
+}
