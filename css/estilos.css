@@ -34,11 +34,13 @@ h1{
 }
 
 .lupita{
-    width: 17px;
-    height: 17px;
-    background-image: url(../img/lupa.webp);
+    width: 20px;
+    height: 20px;
 }
-
+.foto-lupita{
+    width: 20px;
+    height: 20px;
+}
 .nav1{
     display: flex;
     flex-direction: row;
