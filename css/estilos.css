@@ -24,6 +24,12 @@ header{
     color: black;
 }
 
+.icon{
+    display: flex;
+    height: 2px;
+    width: max-content;
+}
+
 .barra{
     margin-left: 15px;
     margin-bottom: 20px;
