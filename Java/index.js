@@ -1,5 +1,5 @@
-let indice = document.querySelector(".nav")
-
+let indice = document.querySelectorAll(".nav");
+indice.forEach(indice=> {
 indice.addEventListener("mouseover", function (){
     indice.style.color="white"
     })
@@ -7,3 +7,5 @@ indice.addEventListener("mouseover", function (){
 indice. addEventListener("mouseout", function(){
     indice.style.color="black"
 })
+});
+
