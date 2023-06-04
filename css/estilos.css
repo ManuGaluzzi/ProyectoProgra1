@@ -19,10 +19,6 @@ body{
     color: blueviolet;
 }
 
-header{
-    background-color: blueviolet;
-    color: black;
-}
 
 .barra{
     margin-left: 15px;
@@ -70,6 +66,7 @@ h2{
     flex-direction: column;
     align-items: center;
 }
+
 
 .imagenes{
     height: 100px;

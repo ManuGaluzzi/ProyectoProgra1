@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!--link rel="stylesheet" href="../css/estilos.css">-->
 </head>
 <body>
 <!-- En la página el usuario podrá ver la lista de artistas/ cantantes del género que seleccionó.
@@ -14,5 +15,24 @@ Lista de artistas de ese género con su foto y su nombre. (¡Atentos! Van a nece
 Funcionalidad
 La información debe provenir de forma dinámica desde la API. Al hacer click sobre un artista la página debe llevarnos al detalle del artista seleccionado. Para acceder a cada página de detalle de artista deberán incorporar query strings en la URL para obtener los datos puntuales desde la API.
 Entregable: Archivo detail-genres.html (o similar) y archivo detail-genres.js (o similar) junto con todos los recursos necesarios y estilos de css. -->
+
+<header>
+    <h1>Artistas</h1>
+    <h2>¿A quien quieres escuchar hoy?</h2>
+        <input type="search">
+        <button type="submit"></button>
+<nav class="nav.artistas">
+    <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Ayuda</a></li>
+        <li><a href="#">Contacto</a></li>
+    </ul>
+</nav>
+</header>
+
+<section class="SectionGenres">
+</section>
+
+ <script src="../Java/artistas.js"></script>
 </body>
 </html>
