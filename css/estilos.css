@@ -38,18 +38,7 @@ h2{
 }
 
 
-.lupita{
-    width: 25px;
-    height: 35px;
-    background-image: url(../img/lupa.webp);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border: 2px solid black;
-    border-radius: 8px;
-}
-
-#busqueda{
+.barraBusqueda{
     margin-right: 0px;
 }
 
@@ -107,6 +96,7 @@ li{
     align-items: center;
 }
 .ImagenesAlbum{
+    align-items: center;
     height: 100px;
     width: 100px;  
 }

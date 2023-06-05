@@ -14,7 +14,7 @@ let fotosArtists = document.querySelectorAll(".imagenes")
 fotosArtists.forEach(fotosArtists=> {
     fotosArtists.addEventListener("mouseover", function (){
         fotosArtists.style.height = "135px"
-        fotosArtists.style.width = "135px"
+        fotosArtists.style.width = "120px"
     })
     fotosArtists.addEventListener("mouseout", function(){
         fotosArtists.style.height = "100px"
