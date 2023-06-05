@@ -1,4 +1,4 @@
-let indice = document.querySelectorAll(".nav");
+let indice = document.querySelectorAll(".navegadores");
 indice.forEach(indice=> {
 indice.addEventListener("mouseover", function (){
     indice.style.color="white"
