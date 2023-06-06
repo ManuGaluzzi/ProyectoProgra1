@@ -27,6 +27,11 @@ body{
     border: 2px solid black;
 }
 
+.lupita{
+    height: 21px;
+    width: 21px;
+}
+
 h1{
     margin-left: 15px;
     font-size: 45px;
