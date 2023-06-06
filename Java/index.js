@@ -1,6 +1,30 @@
+let artistaID = [1, 2, 3, 4, 5];
+for (let i = 1; i < 6; i++) {
+    let urlArt = "https://api.deezer.com/artist"+[i]
 
+fetch(urlArt)
+    .then(function(response){
+        return response.json()
+       
+    })
+    .then(function(data){
+        console.log(data)
+        let artistasap = document.querySelector(".ListaArtista")
+        let artistas = `
+            <article>
+                <p>${data.name}  </p>
+                <img src= "${data.picture}" alt='' />
+                
+             </article>`;
+    
+    artistasap.innerHTML += artistas
+})
+    .catch(function(error){
+        alert(error);
+    })
+}
 
-let urlSongs = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart"
+let urlSongs = "https://api.deezer.com/chart"
 
 fetch (urlSongs)
 .then(function(response){
@@ -11,10 +35,10 @@ fetch (urlSongs)
 
     let songsList = document.querySelector(".ListaCanciones")
     let songs = [];
-    for(let i= 0; i < data.results.length; i++){
-        songs += `<article>
-        <p> ${data.results[i].title_short}</p>
-        <img src= "${data.results[i].picture}"  alt='' />
+    for(let i=0; i < data.results.length; i++){
+        songs+= `<article>
+        <p> "${data.results[i].title_short}" alt=''</p>
+        <img src= ${data.results[i].picture} />
         </article>`
     }
     songsList.innerHTML=songs
