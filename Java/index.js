@@ -1,3 +1,55 @@
+let artistaID = [1, 2, 3, 4, 5];
+for (let i = 1; i < 6; i++) {
+    let url = `https://api.allorigins.win/raw?url=https://api.deezer.com/artist/${i}`
+
+fetch(url)
+    .then(function(response){
+        return response.json()
+       
+    })
+    .then(function(data){
+        console.log(data)
+        let artistasap = document.querySelector(".ListaArtista")
+        let artistas = `
+            <article>
+                <p>Name: ${data.name}  </p>
+                <img src= "${data.picture}" alt='' />
+                
+             </article>`;
+    
+    artistasap.innerHTML += artistas
+})
+    .catch(function(error){
+        alert(error);
+    })
+}
+
+// let albumID = [1, 2, 3, 4, 5];
+// for (let i = 1; i < 6; i++) {
+//     let url = `https://api.allorigins.win/raw?url=https://api.deezer.com/album/${i}`
+
+// fetch(url)
+//     .then(function(response){
+//         return response.json()
+       
+//     })
+//     .then(function(data){
+//         console.log(data)
+//         let albumesap = document.querySelector(".ListaAlbum")
+//         let album = `
+//             <article>
+//                 <p> Name: ${data.title}  </p>
+//                 <img src= "${data.cover}" alt='' />
+//              </article>`;
+    
+//     albumesap.innerHTML += album
+// })
+//     .catch(function(error){
+//         alert(error);
+//     })
+// }
+
+
 let indice = document.querySelectorAll(".navegadores");
 indice.forEach(indice=> {
 indice.addEventListener("mouseover", function (){
