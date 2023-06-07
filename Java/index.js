@@ -1,6 +1,4 @@
-let artistaID = [1, 2, 3, 4, 5];
-for (let i = 1; i < 6; i++) {
-    let urlArt = "https://api.deezer.com/artist"+[i]
+let urlArt = "https://api.deezer.com/artist/"
 
 fetch(urlArt)
     .then(function(response){
@@ -8,23 +6,23 @@ fetch(urlArt)
        
     })
     .then(function(data){
-        console.log(data)
+        console.log(data);
         let artistasap = document.querySelector(".ListaArtista")
-        let artistas = `
-            <article>
-                <p>${data.name}  </p>
-                <img src= "${data.picture}" alt='' />
+        let artistas = [];
+        for(let i=0; i < data.results; i++){
+            artistas+= `  <article>
+                <p>${data.results[i].name}  </p>
+                <img src= "${data.results[i].picture_medium}" alt='' />
                 
              </article>`;
-    
-    artistasap.innerHTML += artistas
+        }
+    artistasap.innerHTML = artistas
 })
     .catch(function(error){
         alert(error);
     })
-}
 
-let urlSongs = "https://api.deezer.com/chart"
+let urlSongs = "https://api.deezer.com/chart/0"
 
 fetch (urlSongs)
 .then(function(response){
@@ -35,10 +33,10 @@ fetch (urlSongs)
 
     let songsList = document.querySelector(".ListaCanciones")
     let songs = [];
-    for(let i=0; i < data.results.length; i++){
+    for(let i=0; i < data.results; i++){
         songs+= `<article>
         <p> "${data.results[i].title_short}" alt=''</p>
-        <img src= ${data.results[i].picture} />
+        <img src= ${data.results[i].md5_image} />
         </article>`
     }
     songsList.innerHTML=songs
