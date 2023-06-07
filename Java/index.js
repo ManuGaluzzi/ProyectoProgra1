@@ -1,3 +1,4 @@
+
 let urlArt = "https://api.deezer.com/artist/"
 
 fetch(urlArt)
