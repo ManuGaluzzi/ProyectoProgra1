@@ -1,5 +1,4 @@
-
-let urlArt = "https://api.deezer.com/artist/"
+let urlArt = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/artists"
 
 fetch(urlArt)
     .then(function(response){
@@ -10,20 +9,21 @@ fetch(urlArt)
         console.log(data);
         let artistasap = document.querySelector(".ListaArtista")
         let artistas = [];
-        for(let i=0; i < data.results; i++){
+        for (let i =0; i < data.data.length; i++){
             artistas+= `  <article>
-                <p>${data.results[i].name}  </p>
-                <img src= "${data.results[i].picture_medium}" alt='' />
+                <p>${data.data[i].name}  </p>
+                <img src= "${data.data[i].picture_medium}" alt='' class= "fotoArtists" />
                 
              </article>`;
         }
-    artistasap.innerHTML = artistas
+        artistasap.innerHTML=artistas
 })
     .catch(function(error){
         alert(error);
     })
 
-let urlSongs = "https://api.deezer.com/chart/0"
+
+let urlSongs = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/tracks"
 
 fetch (urlSongs)
 .then(function(response){
@@ -34,48 +34,17 @@ fetch (urlSongs)
 
     let songsList = document.querySelector(".ListaCanciones")
     let songs = [];
-    for(let i=0; i < data.results; i++){
+    for (let i =0; i < data.data.length; i++){
         songs+= `<article>
-        <p> "${data.results[i].title_short}" alt=''</p>
-        <img src= ${data.results[i].md5_image} />
-        </article>`
+        <p> ${data.data[i].title_short}</p>
+        <img src= "${data.data[i].album.cover_medium}" alt='' class="fotoSongs"/>
+        </article>`;
     }
     songsList.innerHTML=songs
 })
 .catch(function(error){
     console.log("Error: "+ error);
 })
-
-
-
-
-
-
-
-// let albumID = [1, 2, 3, 4, 5];
-// for (let i = 1; i < 6; i++) {
-//     let url = `https://api.allorigins.win/raw?url=https://api.deezer.com/album/${i}`
-
-// fetch(url)
-//     .then(function(response){
-//         return response.json()
-       
-//     })
-//     .then(function(data){
-//         console.log(data)
-//         let albumesap = document.querySelector(".ListaAlbum")
-//         let album = `
-//             <article>
-//                 <p> Name: ${data.title}  </p>
-//                 <img src= "${data.cover}" alt='' />
-//              </article>`;
-    
-//     albumesap.innerHTML += album
-// })
-//     .catch(function(error){
-//         alert(error);
-//     })
-// }
 
 
 let indice = document.querySelectorAll(".navegadores");

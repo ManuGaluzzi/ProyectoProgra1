@@ -87,6 +87,17 @@ li{
     justify-content: space-between;
     align-items: center;
 }
+
+.fotoArtists{
+    width: 130px;
+    height: 130px;
+    border-radius: 50px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .liartista{
     display: flex;
     flex-direction: column;
@@ -115,7 +126,22 @@ li{
     align-items: center;
 }
 
+.ListaCanciones{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
 
+
+.fotoSongs{
+    height: 130px;
+    width: 130px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
 
 
 .ulfoot21{
