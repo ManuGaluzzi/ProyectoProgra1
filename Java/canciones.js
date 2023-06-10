@@ -14,10 +14,10 @@ fetch(endpoint)
         let detcancion = document.querySelector(".detalle_cancion")
         let detalle =
             ` <li>  
-                <p> Artist: ${data.artist.name}  </p>
+            <a href="../Html/artistas.html?id=${data.artist.id}"> <p> Artist: ${data.artist.name} </p> </a>
                 <p> Song: ${data.title}  </p>
                 <img src= "${data.album.cover_medium}" alt='' />
-                <p> Album: ${data.album.title}  </p>
+                <a href="../Html/album.html?id=${data.album.id}">   <p> Album: ${data.album.title}  </p> </a>
              </li>`;
 
         detcancion.innerHTML = detalle

@@ -197,8 +197,15 @@ footer{
 
 .art{
     width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+.imgbus{
+    height: 250px;
+    width: 250px;
+}
 .artdetail{
     display: flex;
     flex-direction: row;

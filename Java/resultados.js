@@ -21,10 +21,10 @@ fetch(endpointBusqueda)
         for (let i=0; i < datos.data.length ;i++){
         busqul += `
             <li class = "art">
-                <h2  class = "cancionesbus">  ${datos.data[i].title}  </h2>
-                <img src= "${datos.data[i].album.cover_medium}" alt='' class = "imgbus" /> 
-                <h3 class= "artistabus" > Artist: ${datos.data[i].artist.name}  </h3>
-                <p class = "albumesbus"> Album: ${datos.data[i].album.title}  </p>
+                <a href="../Html/canciones.html?id=${datos.data[i].id}" class = "cancionesbus"> <h2> ${datos.data[i].title}</h2>  </a>
+                <a href="../Html/canciones.html?id=${datos.data[i].id}"> <img src= "${datos.data[i].album.cover_medium}" alt='' class = "imgbus" /> </a>
+                <a href="../Html/artistas.html?id=${datos.data[i].artist.id}"> <h3 class= "artistabus" > Artist: ${datos.data[i].artist.name}  </h3> </a>
+                <a href="../Html/album.html?id=${datos.data[i].album.id}"> <p class = "albumesbus"> Album: ${datos.data[i].album.title}  </p> </a>
             </li>`;
         }
         resultados.innerHTML = busqul
