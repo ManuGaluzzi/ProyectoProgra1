@@ -10,11 +10,10 @@ fetch(urlArt)
         let artistasap = document.querySelector(".ListaArtista")
         let artistas = [];
         for (let i =0; i < data.data.length; i++){
-            artistas+= `  <li class = "artistlist">
+            artistas+= ` <a href="../Html/artistas.html?id=${data.data[i].id}" class = "artistlist">  
                 <p>${data.data[i].name}  </p>
-                <img src= "${data.data[i].picture_medium}" alt='' class= "fotoArtists" />
-                
-             </li>`;
+                <img src= "${data.data[i].picture_medium}" alt='' class= "fotoArtists" /> 
+             </a>`;
         }
         artistasap.innerHTML=artistas
 })
@@ -35,11 +34,13 @@ fetch (urlSongs)
     let songsList = document.querySelector(".ListaCanciones")
     let songs = [];
     for (let i =0; i < data.data.length; i++){
-        songs+= `<li class = "songslist">
-        <p> ${data.data[i].title_short}</p>
+        songs+= `<a href="../Html/canciones.html?id=${data.data[i].id}" class = "songslist">
+        <p class = "ptit"> ${data.data[i].title_short}</p>
+        <p class = "pnom"> ${data.data[i].artist.name}</p>
         <img src= "${data.data[i].album.cover_medium}" alt='' class="fotoSongs"/>
-        </li>`;
+        </a>`;
     }
+    
     songsList.innerHTML=songs
 })
 .catch(function(error){
@@ -58,10 +59,10 @@ fetch (urlAlbums)
     let albumList = document.querySelector(".ListaAlbumm")
     let albums = [];
     for (let i =0; i < data.data.length; i++){
-        albums+= `<li class = "albumlist">
+        albums+= `<a href="../Html/album.html?id=${data.data[i].id}" class = "albumlist">
         <p> ${data.data[i].title}</p>
         <img src= "${data.data[i].cover_medium}" alt='' class="fotoAlbum"/>
-        </li>`;
+        </a>`;
     }
     albumList.innerHTML = albums
 })

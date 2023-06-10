@@ -11,7 +11,11 @@ fetch(endpointBusqueda)
     })
     .then(function(datos){
         console.log(datos);
-
+        if (datos.data.length == 0){
+            let noresult = document.querySelector(".termino")
+            noresult.innerHTML = "No se encontraron coincidencias con el término buscado"
+            noresult.style.color = "red"
+        } else{
         let resultados = document.querySelector(".resultsbusqueda");
         let busqul =[];
         for (let i=0; i < datos.data.length ;i++){
@@ -23,10 +27,14 @@ fetch(endpointBusqueda)
                 <p class = "albumesbus"> Album: ${datos.data[i].album.title}  </p>
             </li>`;
         }
-          
         resultados.innerHTML = busqul
-
+        let term = document.querySelector(".termino")
+        term.innerHTML+= Busqueda;
+        term.style.color = "white";
+        }
+          
     })
        .catch(function(error){
         console.log(error);
     })
+

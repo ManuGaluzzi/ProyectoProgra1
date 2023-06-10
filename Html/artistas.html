@@ -4,35 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!--link rel="stylesheet" href="../css/estilos.css">-->
+    <title>Artists</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+   
 </head>
+
 <body>
-<!-- En la página el usuario podrá ver la lista de artistas/ cantantes del género que seleccionó.
-Deben figurar al menos:
-Nombre del género.
-Lista de artistas de ese género con su foto y su nombre. (¡Atentos! Van a necesitar explorar un poco más en detalle la API)
-Funcionalidad
-La información debe provenir de forma dinámica desde la API. Al hacer click sobre un artista la página debe llevarnos al detalle del artista seleccionado. Para acceder a cada página de detalle de artista deberán incorporar query strings en la URL para obtener los datos puntuales desde la API.
-Entregable: Archivo detail-genres.html (o similar) y archivo detail-genres.js (o similar) junto con todos los recursos necesarios y estilos de css. -->
+    <header>
+    <nav class="nav1">
+        <ul class="navegacion">
+            <li><a  href="../Html/index.html" class="navegadores">Home</a></li>
+            <li><a  href="../Html/ayuda.html" class="navegadores">Help Center</a></li>
+            <li><a  href="../Html/contacto.html" class="navegadores">Contact</a></li>
+        </ul>
+    </nav>
+    <nav class="nav2">
+        <a class="titulo" href="./index.html"><h1>GiggleCloud</h1></a>
+        <h2>Live your life like your favourite song</h2>
+        <form action="./resultados.html" method="get" class="barraBusqueda">
+            <input type="text" name="buscador" value="" placeholder="¡Buscá lo que quieras escuchar!" size="32">
+            <button type="submit"> Buscar </button>
+        </form>
+    </nav>
 
-<header>
-    <h1>Artistas</h1>
-    <h2>¿A quien quieres escuchar hoy?</h2>
-        <input type="search">
-        <button type="submit"></button>
-<nav class="nav.artistas">
-    <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Ayuda</a></li>
-        <li><a href="#">Contacto</a></li>
-    </ul>
-</nav>
 </header>
+    <h1>Artist Detail</h1>
+    <section class="artdetail">
+        <ul class="detalle_artista"></ul>
 
-<section class="SectionGenres">
-</section>
+        <article class="tp5alb">
+            <h3>Top 5 Albums</h3>
+            <ul class="top_album">  </ul>
+        </article>
+          
+    </section>
 
- <script src="../Java/artistas.js"></script>
+
+
+    <footer>
+        <ul class="ulfoot1"></ul>
+        <li><a href="../Html/contacto.html" class="navegadores">Acerca de nosotros</a></li>        </ul>
+        <ul class="ulfoot2">
+            <li>Bautista Garcia Mansilla</li>
+            <li>Marcos Gubitosi</li>
+            <li>Manuel Galuzzi</li>
+        </ul>
+    </footer>
+    <script src="../Java/artistas.js"></script>
 </body>
 </html>
