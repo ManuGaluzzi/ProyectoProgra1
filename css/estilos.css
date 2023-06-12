@@ -97,6 +97,7 @@ li{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap ;
 }
 
 .fotoArtists{
@@ -120,6 +121,8 @@ li{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap ;
+
 }
 .ptit{
     margin-bottom: 0px;
@@ -130,11 +133,20 @@ li{
     font-size: xx-small;
 }
 .fotoAlbum{
+    height: 150px;
+    width: 150px;
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    height: 130px;
-    width: 130px;  
+    justify-content: space-between; 
 }
-
+.albumlist{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
 
 .SectionGenres{
     display: flex;
@@ -148,6 +160,8 @@ li{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap ;
+
 }
 .songslist{
     width: 250px;
@@ -157,8 +171,8 @@ li{
 }
 
 .fotoSongs{
-    height: 130px;
-    width: 130px;
+    height: 150px;
+    width: 150px;
     display: flex;
     flex-direction: row;
     align-items: center;
