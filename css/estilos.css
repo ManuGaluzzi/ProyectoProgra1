@@ -4,12 +4,18 @@
     box-sizing: border-box;
     
 }
+
+    
+
 a{
     text-decoration: none;
-    color: black;
+    color:blueviolet;
 }
 body{
-    /* background-image: url(../img/fondoVioleta.avif); */
+    margin: 0;
+    border: 0;
+    padding: 0;
+    width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -18,20 +24,15 @@ body{
     background-color: black;
     color: blueviolet;
 }
-
-
-.barra{
-    margin-left: 15px;
-    margin-bottom: 20px;
-    padding: 5px;
-    border: 2px solid black;
+.navegadores{
+    text-decoration: none;
+    color:black;
 }
 
-.lupita{
-    height: 21px;
-    width: 21px;
-}
 
+.titulo{
+    color: blueviolet;
+}
 h1{
     margin-left: 15px;
     font-size: 45px;
@@ -43,8 +44,13 @@ h2{
 }
 
 
-.barraBusqueda{
-    margin-right: 0px;
+input{
+    height: 40px;
+    width: 300px;
+    margin-top: 10px;
+}
+button{
+    height: 40px;
 }
 
 
@@ -53,10 +59,14 @@ h2{
     flex-direction: row;
     align-self: center;
     justify-content:flex-end;
+    margin: 0px;
+
 }
 
+
 .nav1{
-    background-color: blueviolet
+    background-color: blueviolet;
+    box-shadow: -2px -2px 5px rgb(125, 33, 196), 2px 2px 5px rgb(114, 16, 175);
 }
 
 .nav2{
@@ -80,6 +90,7 @@ li{
     list-style-type: none;
     padding: 10px;
 }
+
 .ListaArtista{
     margin: 15px;
     display: flex;
@@ -98,24 +109,30 @@ li{
     justify-content: space-between;
 }
 
-.liartista{
+.artistlist{
+    width: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 180px;
-    width: 142px;
 }
-
-.ListaAlbum{
+.ListaAlbumm{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
-.ImagenesAlbum{
+.ptit{
+    margin-bottom: 0px;
+}
+.pnom{
+    margin-top: 0px;
+    color: white;
+    font-size: xx-small;
+}
+.fotoAlbum{
     align-items: center;
-    height: 100px;
-    width: 100px;  
+    height: 130px;
+    width: 130px;  
 }
 
 
@@ -132,7 +149,12 @@ li{
     justify-content: space-between;
     align-items: center;
 }
-
+.songslist{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .fotoSongs{
     height: 130px;
@@ -155,10 +177,52 @@ li{
     flex-direction: row;
     justify-content: flex-end;
     font-size: smaller;
+    margin: 0px;
+
 }
 
 
 footer{
     background-color: blueviolet;
     color: black; 
+}
+
+
+.resultsbusqueda{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.art{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imgbus{
+    height: 250px;
+    width: 250px;
+}
+.artdetail{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.tp5alb{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.albdetail{
+    display: flex;
+    flex-direction: row;
+    align-items: space-around;
+}
+.songalb{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

@@ -48,15 +48,16 @@ fetch (urlSongs)
 
 
 let indice = document.querySelectorAll(".navegadores");
-indice.forEach(indice=> {
-indice.addEventListener("mouseover", function (){
-    indice.style.color="white"
-    })
-
-indice. addEventListener("mouseout", function(){
-    indice.style.color="black"
-})
-});
+for (let i = 0; i < indice.length; i++) {
+    indice[i].addEventListener("mouseover", function() {
+      indice[i].style.color = "white";
+    });
+  }
+  for (let i = 0; i < indice.length; i++)
+    indice[i].addEventListener("mouseout", function() {
+      indice[i].style.color = "black";
+    });
+;
 
 let fotosArtists = document.querySelectorAll(".imagenes")
 

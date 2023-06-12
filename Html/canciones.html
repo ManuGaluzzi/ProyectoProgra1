@@ -4,9 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Songs</title>
+    <link rel="stylesheet" href="../css/estilos.css">
 </head>
+
 <body>
+    <header>
+    <nav class="nav1">
+        <ul class="navegacion">
+            <li><a  href="../Html/index.html" class="navegadores">Home</a></li>
+            <li><a  href="../Html/ayuda.html" class="navegadores">Help Center</a></li>
+            <li><a  href="../Html/contacto.html" class="navegadores">Contact</a></li>
+        </ul>
+    </nav>
+    <nav class="nav2">
+        <a class="titulo" href="./index.html"><h1>GiggleCloud</h1></a>
+        <h2>Live your life like your favourite song</h2>
+        <form action="./resultados.html" method="get" class="barraBusqueda">
+            <input type="text" name="buscador" value="" placeholder="¡Buscá lo que quieras escuchar!" size="32">
+            <button type="submit"> Buscar </button>
+        </form>
+    </nav>
+
+</header>
+
+    <h1>Song Detail</h1>
+    <section class="sondetail">
+        <ul class="detalle_cancion"></ul>
+
     
+    </section>
+
+
+    <footer>
+        <ul class="ulfoot1"></ul>
+        <li><a href="../Html/contacto.html" class="navegadores">Acerca de nosotros</a></li>        </ul>
+        <ul class="ulfoot2">
+            <li>Bautista Garcia Mansilla</li>
+            <li>Marcos Gubitosi</li>
+            <li>Manuel Galuzzi</li>
+        </ul>
+    </footer>
+    <script src="../Java/canciones.js"></script>
 </body>
 </html>
