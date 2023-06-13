@@ -1,10 +1,13 @@
 let string = location.search 
 let data = new URLSearchParams(string);
 let Busqueda = data.get("buscador") 
-
 let endpointBusqueda = `https://api.allorigins.win/raw?url=https://api.deezer.com/search?q=${Busqueda};`
 
-
+if(Busqueda===""){
+    alert ("Oops!, parece que no escribiste nada.")
+}else if(Busqueda.length<3){
+    alert ("Tu busqueda debe contener al menos 3 caracteres")
+}else{
 fetch(endpointBusqueda)
     .then(function(response){
         return response.json();
@@ -48,4 +51,4 @@ fetch(endpointBusqueda)
         indice[i].addEventListener("mouseout", function() {
           indice[i].style.color = "black";
         });
-      }
+      }}
