@@ -10,16 +10,15 @@ fetch(urlArt)
         let artistasap = document.querySelector(".ListaArtista")
         let artistas = [];
         for (let i =0; i < data.data.length; i++){
-            artistas+= `  <article>
+            artistas+= ` <a href="../Html/artistas.html?id=${data.data[i].id}" class = "artistlist">  
                 <p>${data.data[i].name}  </p>
-                <img src= "${data.data[i].picture_medium}" alt='' class= "fotoArtists" />
-                
-             </article>`;
+                <img src= "${data.data[i].picture_medium}" alt='' class= "fotoArtists" /> 
+             </a>`;
         }
         artistasap.innerHTML=artistas
 })
     .catch(function(error){
-        alert(error);
+        console.log(error);
     })
 
 
@@ -35,15 +34,40 @@ fetch (urlSongs)
     let songsList = document.querySelector(".ListaCanciones")
     let songs = [];
     for (let i =0; i < data.data.length; i++){
-        songs+= `<article>
-        <p> ${data.data[i].title_short}</p>
+        songs+= `<a href="../Html/canciones.html?id=${data.data[i].id}" class = "songslist">
+        <p class = "ptit"> ${data.data[i].title_short}</p>
+        <p class = "pnom"> ${data.data[i].artist.name}</p>
         <img src= "${data.data[i].album.cover_medium}" alt='' class="fotoSongs"/>
-        </article>`;
+        </a>`;
     }
+    
     songsList.innerHTML=songs
 })
 .catch(function(error){
-    console.log("Error: "+ error);
+    console.log(error);
+})
+
+let urlAlbums = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/albums"
+
+fetch (urlAlbums)
+.then(function(response){
+    return response.json()
+})
+.then(function(data){
+    console.log(data);
+
+    let albumList = document.querySelector(".ListaAlbumm")
+    let albums = [];
+    for (let i =0; i < data.data.length; i++){
+        albums+= `<a href="../Html/album.html?id=${data.data[i].id}" class = "albumlist">
+        <p> ${data.data[i].title}</p>
+        <img src= "${data.data[i].cover_medium}" alt='' class="fotoAlbum"/>
+        </a>`;
+    }
+    albumList.innerHTML = albums
+})
+.catch(function(error){
+    console.log(error);
 })
 
 
@@ -53,8 +77,8 @@ for (let i = 0; i < indice.length; i++) {
       indice[i].style.color = "white";
     });
   }
-  for (let i = 0; i < indice.length; i++)
+   for (let i = 0; i < indice.length; i++) {
     indice[i].addEventListener("mouseout", function() {
       indice[i].style.color = "black";
     });
-;
+  }
