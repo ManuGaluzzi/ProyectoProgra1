@@ -18,6 +18,7 @@ fetch(endpoint)
                 <p> Song: ${data.title}  </p>
                 <img src= "${data.album.cover_medium}" alt='' />
                 <a href="../Html/album.html?id=${data.album.id}">   <p> Album: ${data.album.title}  </p> </a>
+                <button class = "btnFavs"> Agregar canción a favoritos </button>
              </li>`;
 
         detcancion.innerHTML = detalle
