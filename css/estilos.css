@@ -217,8 +217,8 @@ footer{
 }
 
 .imgbus{
-    height: 250px;
-    width: 250px;
+    height: 150px;
+    width: 150px;
 }
 .artdetail{
     display: flex;
@@ -235,8 +235,41 @@ footer{
     flex-direction: row;
     align-items: space-around;
 }
-.songalb{
+/* .songalb{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+} */
+
+.canciones_album{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.ListaGenre{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap ;
+}
+.ligenre{
+    width: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+.ftogenre{
+    height: 150px;
+    width: 150px;
+}
+
+
+.ListaArtGenre{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+

@@ -15,7 +15,7 @@ fetch(endpoint)
         let detalle =
             ` <li>  
             <a href="../Html/artistas.html?id=${data.artist.id}"> <p> Artist: ${data.artist.name}  </p> </a>
-                <p> Genre: ${data.genres.data[0].name}  </p>
+            <a href="../Html/detail-genres.html?id=${data.genre_id}"><p> Genre: ${data.genres.data[0].name}  </p>
                 <img src= "${data.cover_medium}" alt='' />
                 <p> Album: ${data.title}  </p>
                 <p> Release Date: ${data.release_date}  </p>
@@ -27,7 +27,7 @@ fetch(endpoint)
                 for (let i=0; i < data.tracks.data.length ;i++){
                 songs +=`
                     <li>
-                    <a href="../Html/canciones.html?id=${data.tracks.data[i].id}"> <p> ${data.tracks.data[i].title}  </p> </a>
+                    <a href="../Html/canciones.html?id=${data.tracks.data[i].id}"> <p> ${i}: ${data.tracks.data[i].title}  </p> </a>
                     </li>`;
                 }
                 lista.innerHTML = songs
