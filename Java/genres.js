@@ -9,7 +9,7 @@ fetch(urlgenre)
     console.log(data)
     let listagen = document.querySelector(".ListaGenre")
     let generos = []
-    for (let i = 0; i < data.data.length; i++) {
+    for (let i = 1; i < data.data.length; i++) {
       generos +=
         ` <li class = "ligenre"> </a>
         <a href="../Html/detail-genres.html?id=${data.data[i].id}"><img class= "ftogenre" src= "${data.data[i].picture_medium}" alt="" /> </a>

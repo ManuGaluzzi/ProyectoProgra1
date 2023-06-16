@@ -9,7 +9,7 @@ fetch(urlArt)
         console.log(data);
         let artistasap = document.querySelector(".ListaArtista")
         let artistas = [];
-        for (let i =0; i < data.data.length; i++){
+        for (let i =1; i < data.data.length; i++){
             artistas+= ` <a href="../Html/artistas.html?id=${data.data[i].id}" class = "artistlist">  
                 <p>${data.data[i].name}  </p>
                 <img src= "${data.data[i].picture_medium}" alt='' class= "fotoArtists" /> 
