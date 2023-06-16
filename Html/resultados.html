@@ -23,7 +23,13 @@
             <h2>Live your life like your favourite song</h2>
             <form action="./resultados.html" method="get" class="barraBusqueda">
                 <input type="text" name="buscador" value="" placeholder="¡Buscá lo que quieras escuchar!" size="32">
-                <button type="submit"> Buscar </button>
+                <select class = "criterio" name="criterio" >
+                    <option value="all">All</option>
+                    <option value="artists">Artists</option>
+                    <option value="albums">Albums</option>
+                    <option value="songs">Songs</option>
+                  </select>
+                  <button type="submit"> Buscar </button>
             </form>
         </nav>
 

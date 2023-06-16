@@ -52,7 +52,9 @@ input{
 button{
     height: 40px;
 }
-
+.criterio{
+    height: 40px;
+}
 
 .navegacion{
     display: flex;
@@ -273,15 +275,19 @@ footer{
     flex-wrap: wrap;
 }
 
-@media(max-width: 400px) {
+@media(max-width: 480px) {
   
-    .navegacion.li.a{
+    .barraBusqueda{
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }   
+    }
+    .navegacion{
+        font-size: 10px;
 
+    }   
+.subtitulo{
+    font-size: 20px;
+}
     .ulfoot1{
         display: flex;
         flex-direction: column;
