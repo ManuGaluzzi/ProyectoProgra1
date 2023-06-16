@@ -293,6 +293,10 @@ footer{
     border-color: yellow;
 }
 
+.contact{
+    margin-left: 15px;
+}
+
 @media(max-width: 480px) {
   
     .barraBusqueda{
