@@ -15,7 +15,7 @@ fetch(endpoint)
         let detalle =
             ` <li>  
             <a href="../Html/artistas.html?id=${data.artist.id}"> <p> Artist: ${data.artist.name}  </p> </a>
-            <a href="../Html/detail-genres.html?id=${data.genre_id}"><p> Genre: ${data.genres.data[0].name}  </p>
+            <a href="../Html/detail-genres.html?id=${data.genre_id}"><p> Genre: ${data.genres.data[0].name}  </p> </a>
                 <img src= "${data.cover_medium}" alt='' />
                 <p> Album: ${data.title}  </p>
                 <p> Release Date: ${data.release_date}  </p>
