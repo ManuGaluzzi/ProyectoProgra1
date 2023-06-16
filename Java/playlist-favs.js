@@ -3,7 +3,9 @@ let recuperoStorage = localStorage.getItem("listaFavs")
 let storageToArray = JSON.parse(recuperoStorage)
 let string = location.search
 let data = new URLSearchParams(string);
-let ID = data.getItem("id")
+let ID = data.get("id")
+
+
 
 let cancionesFavs = []
 
@@ -36,8 +38,6 @@ if(cancionesFavs.includes()){
 
 
 
-
-
 let indice = document.querySelectorAll(".navegadores");
 for (let i = 0; i < indice.length; i++) {
     indice[i].addEventListener("mouseover", function() {
@@ -49,3 +49,23 @@ for (let i = 0; i < indice.length; i++) {
       indice[i].style.color = "black";
     });
   }
+
+  document.querySelector(".botonluz").addEventListener('click',function() {
+    let body = document.querySelector("body")
+    if (body.classList.contains("light-mode")) {
+        body.classList.remove("light-mode")
+        localStorage.setItem('modo','dark')
+    } else{
+        body.classList.add("light-mode")
+        localStorage.setItem('modo','light')
+    }
+  })
+  window.onload = function() {
+    let theme = localStorage.getItem('modo');
+    let body = document.querySelector("body")
+    if (theme === 'light') {
+        body.classList.add('light-mode');
+    } else {
+        body.classList.remove('light-mode');
+    }
+};

@@ -5,7 +5,7 @@
     
 }
 
-    
+
 
 a{
     text-decoration: none;
@@ -16,13 +16,22 @@ body{
     border: 0;
     padding: 0;
     width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     font-family: Inter;
     font-weight: 700;
     background-color: black;
     color: blueviolet;
+}
+
+body.light-mode{
+    background-color: white;
+    
+}
+
+.botonluz{
+    margin: 10px;
+    border-width: 4px;
+    border-color: blueviolet;
+    border-radius: 25px;
 }
 .navegadores{
     text-decoration: none;
@@ -42,6 +51,7 @@ h1{
 h2{
     margin-left: 15px;
 }
+
 
 
 input{
@@ -131,7 +141,7 @@ li{
 }
 .pnom{
     margin-top: 0px;
-    color: white;
+    color: violet;
     font-size: xx-small;
 }
 .fotoAlbum{
@@ -237,11 +247,7 @@ footer{
     flex-direction: row;
     align-items: space-around;
 }
-/* .songalb{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-} */
+
 
 .canciones_album{
     display: flex;
@@ -273,6 +279,18 @@ footer{
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+
+.h3genero{
+    margin-left: 30px;
+}
+.audio{
+    margin-left: 30px;
+}
+
+.btnFavs{
+    border-radius: 25px;
+    border-color: yellow;
 }
 
 @media(max-width: 480px) {

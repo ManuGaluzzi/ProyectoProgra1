@@ -16,7 +16,9 @@ fetch(endpoint)
             ` <li>  
                 <h2>${data.name}  </h2>
                 <img src= "${data.picture_medium}" alt='' />
-                ${fetch(`https://api.allorigins.win/raw?url=https://api.deezer.com/genre/${ID}/artists`)
+                </li>`;
+
+                fetch(`https://api.allorigins.win/raw?url=https://api.deezer.com/genre/${ID}/artists`)
                 .then(function (response) {
                     return response.json()
                 })
@@ -34,8 +36,7 @@ fetch(endpoint)
                     }
                     artistasgen.innerHTML = artistas
                   })
-                }
-             </li>`;
+                
 
         detgenre.innerHTML = detalle
     })
@@ -55,3 +56,22 @@ for (let i = 0; i < indice.length; i++) {
       indice[i].style.color = "black";
     });
   }
+  document.querySelector(".botonluz").addEventListener('click',function() {
+    let body = document.querySelector("body")
+    if (body.classList.contains("light-mode")) {
+        body.classList.remove("light-mode")
+        localStorage.setItem('modo','dark')
+    } else{
+        body.classList.add("light-mode")
+        localStorage.setItem('modo','light')
+    }
+  })
+  window.onload = function() {
+    let theme = localStorage.getItem('modo');
+    let body = document.querySelector("body")
+    if (theme === 'light') {
+        body.classList.add('light-mode');
+    } else {
+        body.classList.remove('light-mode');
+    }
+};
