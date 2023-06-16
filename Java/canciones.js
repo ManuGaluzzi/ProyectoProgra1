@@ -22,6 +22,8 @@ fetch(endpoint)
              </li>`;
 
         detcancion.innerHTML = detalle
+        let audio = document.querySelector(".audio")
+        audio.src = `${data.preview}`
     })
     .catch(function (error) {
         console.log(error);
